@@ -1,29 +1,18 @@
 import java.util.Scanner;
 public class Percobaan603{
-    //Fungsi hitungLuas
-static int hitungLuas (int pjg, int lb){
-    int Luas=pjg*lb;
-    return Luas;
-}
-//Fungsi hitungVolume
-static int hitungVolume (int tinggi, int a, int b){
-    int volume= hitungLuas(a,b)*tinggi;
-    return volume;
-}
-//Fungsi main
-public static void main(String[] args) {
-    Scanner input =new Scanner (System.in);
-    int p,l,t,L, vol;
-    System.out.println("Masukkan panjang");
-    p=input.nextInt();
-    System.out.println("Masukkan lebar");
-    l=input.nextInt();
-    System.out.println("Masukkan tinggi");
-    t=input.nextInt();
-
-    L=hitungLuas(p,l);
-    System.out.println("Luas Persegi Panjang adalah "+L);
-    vol=hitungVolume(t,p,L);
-    System.out.println("Volume Balok adalah "+vol);
-}
+    public static void TampilHinggaKei(int i) {
+        for (int j = 1; j<= i; j++) {
+            System.out.print(j);
+        }
+    }
+    public static int Jumlah(int bil1, int bil2) {
+        return (bil1 + bil2);
+    }
+    public static void TampilJumlah(int bil1, int bil2) {
+        TampilHinggaKei(Jumlah(bil1, bil2));
+    } 
+    public static void main(String[] args){
+        int temp = Jumlah(1, 1);
+        TampilJumlah(temp, 5);
+    }
 }
